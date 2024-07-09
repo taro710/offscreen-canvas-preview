@@ -13,7 +13,7 @@ export default defineConfig({
     open: !('SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in process.env), // Open if it's not a CodeSandbox
   },
   build: {
-    outDir: '../docs',
+    outDir: '../../docs',
     emptyOutDir: true, // Empty the folder first
     sourcemap: true, // Add sourcemap
     rollupOptions: {
