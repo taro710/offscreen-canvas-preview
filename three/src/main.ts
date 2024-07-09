@@ -44,7 +44,7 @@ scene.add(directionalLight);
 scene.add(directionalLight2);
 
 const params = {
-  boxCount: 2000,
+  boxCount: Number(localStorage.getItem('boxCount')) || 1000,
 };
 
 const meshList: THREE.Mesh[] = [];
@@ -73,6 +73,7 @@ gui
     });
     meshList.length = 0;
     meshInit(value);
+    localStorage.setItem('boxCount', value.toString());
   });
 
 const btn = document.getElementById('btn');

@@ -16,7 +16,7 @@ const sizes = {
 };
 
 const params = {
-  boxCount: 1000,
+  boxCount: Number(localStorage.getItem('boxCount')) || 1000,
 };
 
 // Workerを作成し、OffscreenCanvasを渡す
@@ -44,6 +44,7 @@ gui
   .step(10)
   .onFinishChange((value: number) => {
     worker.postMessage({ type: 'update', params: { boxCount: value } });
+    localStorage.setItem('boxCount', value.toString());
   });
 
 const stats = new Stats();
