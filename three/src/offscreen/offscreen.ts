@@ -20,7 +20,7 @@ const params = {
 };
 
 // Workerを作成し、OffscreenCanvasを渡す
-const worker = new Worker('/offscreen/worker.ts');
+const worker = new Worker(new URL('./worker.ts', import.meta.url));
 worker.postMessage({ canvas: offscreenCanvas, sizes, params: { boxCount: params.boxCount } }, [offscreenCanvas]);
 
 const btn = document.getElementById('btn');
