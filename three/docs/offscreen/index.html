@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@2.0.0/dist/chartjs-plugin-deferred.min.js"></script>
+    <script type="module" crossorigin src="/offscreen-canvas-threejs/assets/offscreen-b03a84d3.js"></script>
+    <link rel="modulepreload" crossorigin href="/offscreen-canvas-threejs/assets/stats.module-04b55961.js">
+    <link rel="stylesheet" href="/offscreen-canvas-threejs/assets/stats-3e7d443a.css">
   </head>
   <body>
     <canvas class="webgl"></canvas>
@@ -13,13 +16,13 @@
       <nav class="nav">
         <span>offscreenCanvasApi</span>
         <div class="switch">
-          <a class="link" href="/offscreen-canvas-threejs/offscreen/"> ON </a>
-          <a class="link" aria-current="page" href="/offscreen-canvas-threejs/"> OFF </a>
+          <a class="link" aria-current="page" href="/offscreen-canvas-threejs/offscreen/"> ON </a>
+          <a class="link" href="/offscreen-canvas-threejs/"> OFF </a>
         </div>
       </nav>
 
       <div class="page">
-        <h1>Three.js</h1>
+        <h1>Three.js × <a target="_blank" rel="noopener noreferrer" href="https://developer.mozilla.org/ja/docs/Web/API/OffscreenCanvas">OffscreenCanvas</a></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         <div class="chart-bar">
@@ -180,6 +183,6 @@
       });
     </script>
 
-    <script type="module" src="./main.ts"></script>
+    
   </body>
 </html>
