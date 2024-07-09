@@ -3,22 +3,7 @@
   padding: 0;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: #fff;
-}
-
-html,
-body {
-  overflow: hidden;
-}
-
-.loading {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  color: white;
-  z-index: 1;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 24px;
-  font-weight: bold;
+  line-height: 1.5;
 }
 
 .webgl {
@@ -26,71 +11,76 @@ body {
   top: 0;
   left: 0;
   outline: none;
+  z-index: -1;
 }
 
-.navigation {
-  position: fixed;
-  bottom: 45vh;
-  left: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px;
-  gap: 8px;
-  padding: 10px;
+.page {
+  padding: 32px;
+  margin-top: 86vh;
+  color: white;
+  background-color: rgba(225, 225, 225, 0.15);
 }
 
-.img {
-  width: 80px;
-  height: 64px;
-  border-radius: 4px;
-  display: block;
-  transition: all 0.3s;
-  &:hover {
-    transform: scale(1.1);
-  }
+.chart-bar {
+  float: left;
+  width: 50%;
+  margin: 32px 0;
 }
 
-/* スマホ */
+.chart-doughnut {
+  float: right;
+  width: 50vw;
+  height: 50vw;
+}
 
-@media screen and (max-width: 768px) {
-  .navigation {
-    top: 10px;
-    bottom: auto;
-    left: 10px;
-    flex-direction: row;
-  }
+.chart-radar {
+  float: left;
+  width: 50%;
+  margin: 32px 0;
 }
 
 .nav {
   position: fixed;
-  right: 20px;
-  bottom: 40px;
+  right: 15px;
+  top: 53px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
+  background-color: #1f1f1f;
+  width: 245px;
+  font-size: 12px;
+  padding-left: 4px;
+  box-sizing: border-box;
 }
+
 .switch {
   background-color: white;
   display: flex;
   flex-direction: row;
-  gap: 12px;
+
   justify-content: center;
-  padding: 4px 20px;
+  padding: 1px;
   border-radius: 20px;
 
   > .link {
     color: black;
+    padding: 2px 8px;
+    border-radius: 12px;
+    text-decoration: none;
+  }
+
+  > .link[aria-current='page'] {
+    color: #2dc9ff;
+    font-weight: bold;
+    background-color: #424242;
   }
 }
 
 .button-area {
-  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: center;
-  bottom: 0;
-  background: rgba(225, 225, 225, 0.3);
-  width: 100%;
 }
 
 .likeButton {
