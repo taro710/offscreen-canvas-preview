@@ -7,13 +7,13 @@ const root = resolve(__dirname, 'src');
 export default defineConfig({
   root,
   publicDir: '../static/',
-  base: '/r3f-offscreen-canvas/',
+  base: '/offscreen-canvas-preview/',
   server: {
     host: true, // Open to local network and display URL
     open: !('SANDBOX_URL' in process.env || 'CODESANDBOX_HOST' in process.env), // Open if it's not a CodeSandbox
   },
   build: {
-    outDir: '../docs',
+    outDir: '../../docs',
     emptyOutDir: true, // Empty the folder first
     sourcemap: true, // Add sourcemap
     rollupOptions: {
