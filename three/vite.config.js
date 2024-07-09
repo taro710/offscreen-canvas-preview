@@ -6,7 +6,7 @@ const root = resolve(__dirname, 'src');
 
 export default defineConfig({
   root,
-  publicDir: '../static/',
+  publicDir: '../public/',
   base: '/offscreen-canvas-preview/',
   server: {
     host: true, // Open to local network and display URL
